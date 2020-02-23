@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="BFzUX9hsQA3MY2kCpH4PCR" LanguageVersion="2019.2.0-0211-186df433f9" Version="0.128">
+  <NugetDependency Id="PWDMraDzgoDO4vc7E0jkgy" Location="VL.CoreLib" Version="2019.2.0-0211-g186df433f9" />
+  <Patch Id="O24QXTWYCqVLY1RuYkWfu4">
+    <Canvas Id="JnRCM55Y0TzOB5WKqbvUyQ" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="FlpEGpYeaMML7DeapbfStn">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="IjKokzOQif6LM5La04FtuI">
+        <Canvas Id="Cuqw4WUMqjKLY24MEOri2d" CanvasType="Group">
+          <Node Bounds="467,309,25,19" Id="QhOMOhs4Pr9PdFmGhxhklh">
+            <p:NodeReference LastCategoryFullName="VL.FMOD" LastSymbolSource="VL.FMODStudio.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="FMODSystem" />
+            </p:NodeReference>
+            <Pin Id="SPrPKzzfEFrOfq88LBhtBt" Name="Banks" Kind="InputPin" />
+            <Pin Id="FfuOPedck03MWZ5QXnVO7k" Name="Update" Kind="ApplyPin" />
+          </Node>
+          <Pad Id="JXFbTD61swcLwdOyKr7Y9t" Comment="" Bounds="469,232,105,65" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Path" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:Value>
+              <Item>C:\Users\magne\OneDrive\Documentos\FMOD Studio\examples\Build\Desktop\Master.bank</Item>
+              <Item>C:\Users\magne\OneDrive\Documentos\FMOD Studio\examples\Build\Desktop\Master.strings.bank</Item>
+              <Item>C:\Users\magne\OneDrive\Documentos\FMOD Studio\examples\Build\Desktop\SFX.bank</Item>
+            </p:Value>
+          </Pad>
+          <Node Bounds="468,445,93,19" Id="ANohlWBxTSRNOuNmY4ar80">
+            <p:NodeReference LastCategoryFullName="VL.FMOD" LastSymbolSource="VL.FMODStudio.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="ContinuousEvent" />
+            </p:NodeReference>
+            <Pin Id="POLF8lv17VbQVy22vqTDuf" Name="Input" Kind="InputPin" DefaultValue="event:/Ambience/Forest">
+              <p:TypeAnnotation LastCategoryFullName="VL.FMOD" LastSymbolSource="VL.FMODStudio.vl">
+                <Choice Kind="TypeFlag" Name="FMODEvent" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="RgHDHHGyLceMTWnpHPAJDK" Name="Wind" Kind="InputPin" PinGroupName="Parameters">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="F3725MQsrd6O6KC1JiHv3M" Name="Cover" Kind="InputPin" PinGroupName="Parameters">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="HyoUcc3wazYLCVY43AL0ez" Name="Rain" Kind="InputPin" PinGroupName="Parameters">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="DCuI644GCi6NnPHODt8fc7" Name="Play" Kind="InputPin" DefaultValue="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+          </Node>
+          <Node Bounds="711,436" Id="UqM2nDVAYyYPsxxi2tEamp">
+            <p:NodeReference LastCategoryFullName="VL.FMOD" LastSymbolSource="VL.FMODStudio.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="EmitEvent" />
+            </p:NodeReference>
+            <Pin Id="GmsmbYcjHLgPsdTlXdeuq8" Name="Input" Kind="InputPin" DefaultValue="event:/Character/Door Close">
+              <p:TypeAnnotation LastCategoryFullName="VL.FMOD" LastSymbolSource="VL.FMODStudio.vl">
+                <Choice Kind="TypeFlag" Name="FMODEvent" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="O1NuWnOhbvDLLqOKaxtHhU" Name="Update" Kind="InputPin" DefaultValue="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+          </Node>
+          <Pad Id="CxVy881qiVrMi6leJGAPIs" Bounds="769,391,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="711,555,61,19" Id="Nt78h7iudqVOTVZ4aBqk0Q">
+            <p:NodeReference LastCategoryFullName="VL.FMOD" LastSymbolSource="VL.FMODStudio.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="EmitEvent" />
+            </p:NodeReference>
+            <Pin Id="TNFG8GgF3upMfiXJw0FQKx" Name="Input" Kind="InputPin" DefaultValue="event:/Character/Door Open">
+              <p:TypeAnnotation LastCategoryFullName="VL.FMOD" LastSymbolSource="VL.FMODStudio.vl">
+                <Choice Kind="TypeFlag" Name="FMODEvent" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="MH1RqKQ4IAuNxIxKOPmvjz" Name="Update" Kind="InputPin" DefaultValue="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+          </Node>
+          <Pad Id="H5Ta6bCDFUuQMPlYf2p0Ma" Bounds="769,510,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="IH9uGh13i9IM3xjadM93O5" Comment="" Bounds="713,485,202,15" ShowValueBox="true" isIOBox="true" Value="event:/Character/Door Open">
+            <p:TypeAnnotation LastCategoryFullName="VL.FMOD" LastSymbolSource="VL.FMODStudio.vl">
+              <Choice Kind="TypeFlag" Name="FMODEvent" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="BRhFxeguTJ7PMA87iYLlRg" Comment="" Bounds="713,364,202,15" ShowValueBox="true" isIOBox="true" Value="event:/Character/Door Close">
+            <p:TypeAnnotation LastCategoryFullName="VL.FMOD" LastSymbolSource="VL.FMODStudio.vl">
+              <Choice Kind="TypeFlag" Name="FMODEvent" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="OzUPaA3lL06P5LGYDAywwK" Comment="" Bounds="470,370,202,15" ShowValueBox="true" isIOBox="true" Value="event:/Ambience/Forest">
+            <p:TypeAnnotation LastCategoryFullName="VL.FMOD" LastSymbolSource="VL.FMODStudio.vl">
+              <Choice Kind="TypeFlag" Name="FMODEvent" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Dps3bl9mlSWPzzMPj5WF2T" Comment="Play" Bounds="558,399,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+          </Pad>
+        </Canvas>
+        <Patch Id="KgEfzW8R8bTPg6IJtgQCsr" Name="Create" />
+        <Patch Id="VNoxEERqgphPBZ9ds2CE77" Name="Update" />
+        <ProcessDefinition Id="SJhOOn5xECXQVTxzZn9uas">
+          <Fragment Id="F7KkQ2AhgjSMYjm25kDfKk" Patch="KgEfzW8R8bTPg6IJtgQCsr" Enabled="true" />
+          <Fragment Id="NhPHDlsY5HXNdHsItGtlYG" Patch="VNoxEERqgphPBZ9ds2CE77" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="Gax9u59663tNxpeKdiZbnw" Ids="JXFbTD61swcLwdOyKr7Y9t,SPrPKzzfEFrOfq88LBhtBt" />
+        <Link Id="SSgva6x69mYPZQ8VY9Swy4" Ids="CxVy881qiVrMi6leJGAPIs,O1NuWnOhbvDLLqOKaxtHhU" />
+        <Link Id="HnCYCNpPhgGNLOI78jkzDe" Ids="H5Ta6bCDFUuQMPlYf2p0Ma,MH1RqKQ4IAuNxIxKOPmvjz" />
+        <Link Id="EhzCpylRuX1MO5Ll1wmLgu" Ids="IH9uGh13i9IM3xjadM93O5,TNFG8GgF3upMfiXJw0FQKx" />
+        <Link Id="GBFKkmdciW8MuIAG1cXCmi" Ids="BRhFxeguTJ7PMA87iYLlRg,GmsmbYcjHLgPsdTlXdeuq8" />
+        <Link Id="NIr05Idi9y4OoYhRa97Ria" Ids="OzUPaA3lL06P5LGYDAywwK,POLF8lv17VbQVy22vqTDuf" />
+        <Link Id="QpZi30f5GsjPop7Nk5FZgL" Ids="Dps3bl9mlSWPzzMPj5WF2T,DCuI644GCi6NnPHODt8fc7" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="HUf9VwQXmbgP8aNtZVp920" Location="VL.Skia" Version="2019.2.0-0211-g186df433f9" />
+  <DocumentDependency Id="ThtGhMpQDKEPfGheDavLP3" Location="../VL.FMODStudio.vl" />
+</Document>
