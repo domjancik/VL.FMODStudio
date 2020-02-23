@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="BFzUX9hsQA3MY2kCpH4PCR" LanguageVersion="2019.2.0-0211-186df433f9" Version="0.128">
+  <NugetDependency Id="PWDMraDzgoDO4vc7E0jkgy" Location="VL.CoreLib" Version="2019.2.0-0211-g186df433f9" />
+  <Patch Id="O24QXTWYCqVLY1RuYkWfu4">
+    <Canvas Id="JnRCM55Y0TzOB5WKqbvUyQ" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="FlpEGpYeaMML7DeapbfStn">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="IjKokzOQif6LM5La04FtuI">
+        <Canvas Id="Cuqw4WUMqjKLY24MEOri2d" CanvasType="Group">
+          <Node Bounds="609,326,25,19" Id="QhOMOhs4Pr9PdFmGhxhklh">
+            <p:NodeReference LastCategoryFullName="VL.FMOD" LastSymbolSource="VL.FMODStudio.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="FMODSystem" />
+            </p:NodeReference>
+            <Pin Id="SPrPKzzfEFrOfq88LBhtBt" Name="Banks" Kind="InputPin" />
+            <Pin Id="FfuOPedck03MWZ5QXnVO7k" Name="Update" Kind="ApplyPin" />
+          </Node>
+          <Node Bounds="554,372" Id="QPWB7HTH61tNIYi2SjfACY">
+            <p:NodeReference LastCategoryFullName="VL.FMOD" LastSymbolSource="FMODTest.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="ListEvents" />
+              <CategoryReference Kind="Category" Name="FMOD" NeedsToBeDirectParent="true" />
+            </p:NodeReference>
+            <Pin Id="C4lsbTkvS9YNPEu6Ls8ol6" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="LSheVKmZ1T9O84oOZ7WCiH" Comment="" Bounds="558,426,209,138" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">15</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="438,466" Id="PWvbF152C67ONParfRCGuU">
+            <p:NodeReference LastCategoryFullName="VL.FMOD" LastSymbolSource="FMODTest.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="EmitEvent" />
+              <CategoryReference Kind="Category" Name="FMOD" NeedsToBeDirectParent="true" />
+            </p:NodeReference>
+            <Pin Id="LXBHHXgc7kpN0Ie55kMHYp" Name="Event Path" Kind="InputPin" DefaultValue="event:/Music/Radio Station">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="NjklhT84HT3O9NRuZIE9LN" Name="Update" Kind="InputPin" DefaultValue="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+          </Node>
+          <Pad Id="OlZMpeZThuoP1uqLkEBOaK" Comment="Update" Bounds="455,383,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="GKw9VPb1N2SOD8uE7aYvyD" Comment="Bank" Bounds="348,218,140,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\..\source\repos\FMODTest\FMODTest\bin\x64\Debug\netcoreapp3.1\bank\Build\Desktop\Master.bank">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="TTbebFHEOXKQaRiAsakHKq" Comment="Strings Bank" Bounds="591,204,140,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\..\source\repos\FMODTest\FMODTest\bin\x64\Debug\netcoreapp3.1\bank\Build\Desktop\Master.strings.bank">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="HGn5jTMO82bPJ4bkLRT8Vy" Comment="Event Path" Bounds="300,353,65,15" ShowValueBox="true" isIOBox="true" Value="event:/Event">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="JXFbTD61swcLwdOyKr7Y9t" Comment="" Bounds="608,250,295,65" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Path" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:Value>
+              <Item>C:\Users\magne\OneDrive\Documentos\FMOD Studio\examples\Build\Desktop\Master.bank</Item>
+              <Item>C:\Users\magne\OneDrive\Documentos\FMOD Studio\examples\Build\Desktop\Master.strings.bank</Item>
+              <Item>C:\Users\magne\OneDrive\Documentos\FMOD Studio\examples\Build\Desktop\Music.bank</Item>
+            </p:Value>
+          </Pad>
+        </Canvas>
+        <Patch Id="KgEfzW8R8bTPg6IJtgQCsr" Name="Create" />
+        <Patch Id="VNoxEERqgphPBZ9ds2CE77" Name="Update" />
+        <ProcessDefinition Id="SJhOOn5xECXQVTxzZn9uas">
+          <Fragment Id="F7KkQ2AhgjSMYjm25kDfKk" Patch="KgEfzW8R8bTPg6IJtgQCsr" Enabled="true" />
+          <Fragment Id="NhPHDlsY5HXNdHsItGtlYG" Patch="VNoxEERqgphPBZ9ds2CE77" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="RNMT6KWJ1KzMaLSwRw4c1J" Ids="C4lsbTkvS9YNPEu6Ls8ol6,LSheVKmZ1T9O84oOZ7WCiH" />
+        <Link Id="MddfFzjhfd2LdfDSKrlKHz" Ids="OlZMpeZThuoP1uqLkEBOaK,NjklhT84HT3O9NRuZIE9LN" />
+        <Link Id="Gax9u59663tNxpeKdiZbnw" Ids="JXFbTD61swcLwdOyKr7Y9t,SPrPKzzfEFrOfq88LBhtBt" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="HUf9VwQXmbgP8aNtZVp920" Location="VL.Skia" Version="2019.2.0-0211-g186df433f9" />
+  <DocumentDependency Id="ThtGhMpQDKEPfGheDavLP3" Location="../VL.FMODStudio.vl" />
+</Document>

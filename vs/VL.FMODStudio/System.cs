@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reactive.Subjects;
 using System.Text;
 using System.Threading.Tasks;
 using FMOD;
@@ -10,23 +11,30 @@ namespace VL.FMODStudio
 {
     public class System: IDisposable
     {
+        //public IObservable<object> EventsChanged => _eventsChanged;
+        
         private static System instance = null;
 
         private FMOD.Studio.System _system;
+        //private Subject<string> _eventsChanged;
+
+        public static System Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new System(Utilities.initStudioSystem());
+                }
+
+                return instance;
+            }
+        }
 
         private System(FMOD.Studio.System system)
         {
             _system = system;
-        }
-
-        public static System GetInstance()
-        {
-            if (instance == null)
-            {
-                instance = new System(Utilities.initStudioSystem());
-            }
-
-            return instance;
+            //_eventsChanged = new Subject<string>();
         }
 
         public void LoadBank(string path, bool loadSamples = true)
@@ -38,6 +46,9 @@ namespace VL.FMODStudio
             Utilities.checkResult(_system.loadBankFile(path, FMOD.Studio.LOAD_BANK_FLAGS.NORMAL, out bank));
 
             if (loadSamples) LoadBankSamples(bank);
+
+            Notifications.Instance.EventsChanged.OnNext("loaded " + path);
+            //_eventsChanged.OnNext("loaded " + path);
         }
 
         public void LoadBankSamples(FMOD.Studio.Bank bank)
@@ -95,6 +106,10 @@ namespace VL.FMODStudio
             Utilities.checkResult(_system.getEvent(eventPath, out ev));
             Utilities.checkResult(ev.createInstance(out eventInstance));
             Utilities.checkResult(eventInstance.start());
+        }
+
+        public void EmitEvent(FMODEvent input) {
+            EmitEvent(input.Value);
         }
 
         public void ListEventParameters()
