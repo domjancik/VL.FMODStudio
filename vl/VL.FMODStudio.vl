@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="ABkKRGZEvXJMaXt6YyVmSH" LanguageVersion="2019.2.0-0211-186df433f9" Version="0.128">
+  <NugetDependency Id="BqMn4oMIUYgMzLTMzkbweF" Location="VL.CoreLib" Version="2019.2.0-0211-g186df433f9" />
+  <Patch Id="NeZ3QSrIbAoNRQxhPCwYoh">
+    <Canvas Id="S7nZggW5AySQLTt68mGFXo" DefaultCategory="VL.FMOD" CanvasType="FullCategory">
+      <!--
+
+    ************************ FMODSystem ************************
+
+-->
+      <Node Name="FMODSystem" Bounds="330,183" Id="EPuxtxZ3KTHNz9KLsA80tZ">
+        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <Choice Kind="ContainerDefinition" Name="Process" />
+        </p:NodeReference>
+        <Patch Id="BzfOJxcLxYnMfbxX7Qnjyq">
+          <Canvas Id="N2uIOxgDwd1NZx3pETv6mG" CanvasType="Group">
+            <Node Bounds="365,140,70,19" Id="Vdkd8LyGzOILZLGmLOTlTh">
+              <p:NodeReference LastCategoryFullName="VL.FMODStudio.System" LastSymbolSource="VL.FMODStudio.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="GetInstance" />
+              </p:NodeReference>
+              <Pin Id="GEIqYQk3S3hNRo5Tz8LZnJ" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="467,311,109,77" Id="IonKnu1zyX1NuvsFi2keRG">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="VL.CoreLib.Experimental.vl">
+                <Choice Kind="ProcessAppFlag" Name="Try" />
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              </p:NodeReference>
+              <Pin Id="BdJqyRB0iD1PWKxGakzIly" Name="Default Output" Kind="InputPin" />
+              <Pin Id="BAZalPYXPL3PYRawogmv49" Name="Result" Kind="OutputPin" />
+              <Pin Id="GRXQdM1YnR6OkQLBVUztvI" Name="Success" Kind="OutputPin" />
+              <Pin Id="POPRs41AchGMsX9pNZ6VRm" Name="Error Message" Kind="OutputPin" />
+              <Patch Id="F3sTfovABppOENsKmXyHql" ManuallySortedPins="true">
+                <Patch Id="HbeqCVb2MNPOjFmvj6W34S" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="I9oBPJs27VPLM4kCXRLBWV" Name="Try" ManuallySortedPins="true">
+                  <Pin Id="EhzPmhin0sEO9rJDKvPcOP" Name="Output" Kind="OutputPin" />
+                </Patch>
+                <ControlPoint Id="QuP0I65cPv5LBC14u53hqi" Bounds="486,381" />
+                <Node Bounds="479,334,85,26" Id="CVz0QDTkdRHLltVcLSVz9W">
+                  <p:NodeReference LastCategoryFullName="VL.FMODStudio.System" LastSymbolSource="VL.FMODStudio.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="LoadBanks" />
+                  </p:NodeReference>
+                  <Pin Id="SpWnKeU3GvLMwgABQP4Uvu" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="UsjYqJ2W4aINNopYYib969" Name="Paths" Kind="InputPin" />
+                  <Pin Id="PzcrV66oosYNhPHVODD7P0" Name="Output" Kind="StateOutputPin" />
+                </Node>
+              </Patch>
+            </Node>
+            <Pad Id="BADBuKwctXiOrBcrHQXm3P" SlotId="ClZbPsNMZf2NSldh5kzeOV" Bounds="438,542" />
+            <Node Bounds="391,579,49,26" Id="A3ChbleE95gNQko4vAZvaF">
+              <p:NodeReference LastCategoryFullName="VL.FMODStudio.System" LastSymbolSource="VL.FMODStudio.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
+                <CategoryReference Kind="AssemblyCategory" Name="System" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="AssemblyCategory" Name="FMODStudio" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="E1aCUxO8pHYMscglc26QNW" Name="Input" Kind="StateInputPin" />
+              <Pin Id="DwVa3wlBk8gLEunuPgQ2fZ" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="458,576,53,26" Id="LbXkdGkPfGQPy7Zsy5raGm">
+              <p:NodeReference LastCategoryFullName="VL.FMODStudio.System" LastSymbolSource="VL.FMODStudio.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Dispose" />
+                <CategoryReference Kind="AssemblyCategory" Name="System" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="OPjd1gq0k5nNWfILlYiKXU" Name="Input" Kind="StateInputPin" />
+              <Pin Id="GV0ajF83FdKMy7g5Kpur6K" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Pad Id="F6PDFNTeYKWNEUOlhiQRr6" Comment="Error Message" Bounds="571,409,78,12" ShowValueBox="true" isIOBox="true" />
+            <Node Bounds="553,60,65,26" Id="JpPjnlLSt5FQUaMwO6PAk8">
+              <p:NodeReference LastCategoryFullName="IO.Path" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="GetFiles" />
+              </p:NodeReference>
+              <Pin Id="UXhVjVP4yPPQKYG10Nn2mU" Name="Input" Kind="StateInputPin" />
+              <Pin Id="R7CS2MNeVdTPEBGyJy4pqH" Name="Search Pattern" Kind="InputPin" DefaultValue="*.bank">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="String" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="DsTHRjEjnVHNfPvNrhebL4" Name="Include Subdirectories" Kind="InputPin" />
+              <Pin Id="EM3Te7YStMUQdr6UwBkpJw" Name="Include Hidden" Kind="InputPin" />
+              <Pin Id="Ls5TZqhUtCpO75N2iD20zY" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="539,192,83,86" Id="CPuxcmcB6kpM2860ezclfb">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <Pin Id="FCrhCuulhLnNzQPfHovpLj" Name="Break" Kind="OutputPin" />
+              <Patch Id="VnBJwszyiyDNHyawgDgDIZ" ManuallySortedPins="true">
+                <Patch Id="SLSK66AoQAGMP023G5IaXT" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="A7ioDlVLZsjNgL42n0RRfP" Name="Update" ManuallySortedPins="true" />
+                <Patch Id="C4FDycnW1yaLNrsLB2BZ6j" Name="Dispose" ManuallySortedPins="true" />
+                <Node Bounds="555,223,55,19" Id="P2m52g8sgWNOifLm4kmwHZ">
+                  <p:NodeReference LastCategoryFullName="IO.Path" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="Category" Name="Path" />
+                    <Choice Kind="OperationCallFlag" Name="ToString" />
+                  </p:NodeReference>
+                  <Pin Id="KAIRzpRfJ1YObfNBMbjEvu" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="DPlxXYnAXVfMr3RuQ94tah" Name="Result" Kind="OutputPin" />
+                </Node>
+              </Patch>
+              <ControlPoint Id="FCllE3d8HnmPMIaUkyUSK8" Bounds="553,198" Alignment="Top" />
+              <ControlPoint Id="DRbkrKRkrqCOclGlKBNOM5" Bounds="561,272" Alignment="Bottom" />
+            </Node>
+            <ControlPoint Id="ETT2sMDY9vJNnxQdylwAdK" Bounds="554,29" />
+            <ControlPoint Id="HSbbyZ6TKygNvp5FEqjtgk" Bounds="679,115" />
+            <Pad Id="LMJEde9KNMrMKnfFSXNwPE" Comment="" Bounds="666,168,596,143" ShowValueBox="true" isIOBox="true">
+              <p:ValueBoxSettings>
+                <p:maxvisibleentries p:Type="Int32">19</p:maxvisibleentries>
+              </p:ValueBoxSettings>
+            </Pad>
+          </Canvas>
+          <Patch Id="A5OxqXFYhAOMhhKn4rFyqz" Name="Create" ParticipatingElements="Vdkd8LyGzOILZLGmLOTlTh">
+            <Pin Id="OqFlOojEKpgLQsE93upq7g" Name="Banks Directory" Kind="InputPin" Bounds="551,99" />
+            <Pin Id="NWnNhGGM4WbO2yTqOm4xrU" Name="Banks" Kind="InputPin" Bounds="679,115" />
+          </Patch>
+          <Patch Id="OU8oH82zOMaPgMDOYIKzHZ" Name="Update" />
+          <ProcessDefinition Id="LuekHdXjbBpMHwy4fQBjhT">
+            <Fragment Id="GBYx8TLCW2VODRGsyqUud7" Patch="A5OxqXFYhAOMhhKn4rFyqz" Enabled="true" />
+            <Fragment Id="KbP0ShMZT8hQaskdXn6zJ3" Patch="OU8oH82zOMaPgMDOYIKzHZ" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="JIDK1SHPNt5LTqgutlZOtV" Ids="GEIqYQk3S3hNRo5Tz8LZnJ,SpWnKeU3GvLMwgABQP4Uvu" />
+          <Link Id="Vr4g2Cjm1ZsNSEQCpczhVq" Ids="QuP0I65cPv5LBC14u53hqi,EhzPmhin0sEO9rJDKvPcOP" IsHidden="true" />
+          <Link Id="HjknXt4xnU5MgOhHYCdzTW" Ids="PzcrV66oosYNhPHVODD7P0,QuP0I65cPv5LBC14u53hqi" />
+          <Slot Id="ClZbPsNMZf2NSldh5kzeOV" Name="System" />
+          <Link Id="C5tAqXELfBAMQ9Ks5ZnZZ4" Ids="BAZalPYXPL3PYRawogmv49,BADBuKwctXiOrBcrHQXm3P" />
+          <Link Id="S6Hh1df21ZKLhI3WxGC8Fy" Ids="BADBuKwctXiOrBcrHQXm3P,E1aCUxO8pHYMscglc26QNW" />
+          <Patch Id="QE30LPBeUEGMKweI10XcW5" Name="Dispose" ParticipatingElements="LbXkdGkPfGQPy7Zsy5raGm" />
+          <Link Id="GjGuLG3X8bOOvnkljPmiAH" Ids="BADBuKwctXiOrBcrHQXm3P,OPjd1gq0k5nNWfILlYiKXU" />
+          <Link Id="QrqjwRWewwWQTQeiCjW2Kh" Ids="GEIqYQk3S3hNRo5Tz8LZnJ,BdJqyRB0iD1PWKxGakzIly" />
+          <Link Id="CZk0XTVAyDTMP0JfuMNvkB" Ids="POPRs41AchGMsX9pNZ6VRm,F6PDFNTeYKWNEUOlhiQRr6" />
+          <Link Id="LAwx7HatDK3NQJW3qTwOrF" Ids="FCllE3d8HnmPMIaUkyUSK8,KAIRzpRfJ1YObfNBMbjEvu" />
+          <Link Id="VatKkx6K2uWLt5TPX7SIlv" Ids="DPlxXYnAXVfMr3RuQ94tah,DRbkrKRkrqCOclGlKBNOM5" />
+          <Link Id="Qh6NregjdWdOhK5Pwq3F8w" Ids="DRbkrKRkrqCOclGlKBNOM5,UsjYqJ2W4aINNopYYib969" />
+          <Link Id="AvdpYrRNc6IOxAqLJnH6De" Ids="ETT2sMDY9vJNnxQdylwAdK,UXhVjVP4yPPQKYG10Nn2mU" />
+          <Link Id="RvECBamLL6BOkH3Bj2GhSM" Ids="OqFlOojEKpgLQsE93upq7g,ETT2sMDY9vJNnxQdylwAdK" IsHidden="true" />
+          <Link Id="RsQ1gvTaQUrQV1Oxf4doIT" Ids="HSbbyZ6TKygNvp5FEqjtgk,FCllE3d8HnmPMIaUkyUSK8" />
+          <Link Id="J01TMdiZPcIPBlUKvYUMZ1" Ids="NWnNhGGM4WbO2yTqOm4xrU,HSbbyZ6TKygNvp5FEqjtgk" IsHidden="true" />
+          <Link Id="C646HGxzd3MPRXvCzD02kg" Ids="Ls5TZqhUtCpO75N2iD20zY,LMJEde9KNMrMKnfFSXNwPE" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ EmitEvent ************************
+
+-->
+      <Node Name="EmitEvent" Bounds="328,233" Id="MWR6M1eLHBEMYY02xrhjuZ">
+        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <Choice Kind="ContainerDefinition" Name="Process" />
+        </p:NodeReference>
+        <Patch Id="Kn7iyyCRZEYM1vwTuGL6jv">
+          <Canvas Id="STL6DBYPrczLrO7BE5AvJQ" CanvasType="Group">
+            <Node Bounds="328,210" Id="Md5NIfnIVlxNNkk766slIR">
+              <p:NodeReference LastCategoryFullName="VL.FMODStudio.System" LastSymbolSource="VL.FMODStudio.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="GetInstance" />
+              </p:NodeReference>
+              <Pin Id="Fp16NXuD1eBPi5dKrXvY6H" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="327,258,61,26" Id="RhexUZEczPVN5G4Mt99IuA">
+              <p:NodeReference LastCategoryFullName="VL.FMODStudio.System" LastSymbolSource="VL.FMODStudio.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="EmitEvent" />
+              </p:NodeReference>
+              <Pin Id="OBIdiaxuwlrQRgDP37L5pm" Name="Input" Kind="StateInputPin" />
+              <Pin Id="Oc7IAEjQDdELsVQT5oRCUG" Name="Event Path" Kind="InputPin" />
+              <Pin Id="UJKH5GPDkorLdTxtzHUkjH" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <ControlPoint Id="UadjkVHOxKzNkMA2kD45Re" Bounds="413,188" />
+          </Canvas>
+          <Patch Id="RotuI30wbMXPaUvKt22rym" Name="Create" />
+          <Patch Id="CBHrsnOKxy1OuzqUGmkMD8" Name="Update">
+            <Pin Id="RIJKJuNsTplNAwTDJ93RKX" Name="Event Path" Kind="InputPin" Bounds="413,188" />
+          </Patch>
+          <ProcessDefinition Id="TahP0UmXrMINRHgduPMQic">
+            <Fragment Id="Am098uSCiMGQP4AGAQjOuw" Patch="RotuI30wbMXPaUvKt22rym" Enabled="true" />
+            <Fragment Id="E5IEhdBTi4WPLmWBrAaXb2" Patch="CBHrsnOKxy1OuzqUGmkMD8" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="KH68shwd8mqPSks1lGRDWm" Ids="Fp16NXuD1eBPi5dKrXvY6H,OBIdiaxuwlrQRgDP37L5pm" />
+          <Link Id="SVvoCjm7383PYUs7FAJ3KM" Ids="UadjkVHOxKzNkMA2kD45Re,Oc7IAEjQDdELsVQT5oRCUG" />
+          <Link Id="TqzKBLKLUgQL77ISrM8Yuz" Ids="RIJKJuNsTplNAwTDJ93RKX,UadjkVHOxKzNkMA2kD45Re" IsHidden="true" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ ListEvents ************************
+
+-->
+      <Node Name="ListEvents" Bounds="340,280" Id="Dz1WLtVy1jSMOdPYNfxGxO">
+        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <Choice Kind="ContainerDefinition" Name="Process" />
+        </p:NodeReference>
+        <Patch Id="NLbXoDKcJNYLrO1QZQSxKa">
+          <Canvas Id="Ot5u5RolfiXPyARlHzHbjn" CanvasType="Group">
+            <Node Bounds="358,255,70,65" Id="ENnOISsCRfSOjh0eytaiqM">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                <Choice Kind="ProcessStatefulRegion" Name="Cache" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <Pin Id="LJzlneTK7tPMZeWwjfTGJU" Name="Force" Kind="InputPin" />
+              <Pin Id="AsATdbJQSngN4AflxF9FxO" Name="Dispose Cached Outputs" Kind="InputPin" />
+              <Pin Id="AZbYCkJCJwKNaXQmGjyKVj" Name="Has Changed" Kind="OutputPin" />
+              <ControlPoint Id="Vp08bAACTuoONQVgH61pXo" Bounds="422,334" Alignment="Bottom" />
+              <Patch Id="IQ4sjTIyVGqLKuYlZjvh4J" ManuallySortedPins="true">
+                <Patch Id="QmxxXWZTluUQQg8HPvCB7K" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="JChFnJPpzj9PuwgFnD16Ej" Name="Then" ManuallySortedPins="true" />
+                <Node Bounds="358,258" Id="B47v5m9nbA9L1mdMJ36WLh">
+                  <p:NodeReference LastCategoryFullName="VL.FMODStudio.System" LastSymbolSource="VL.FMODStudio.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="GetInstance" />
+                  </p:NodeReference>
+                  <Pin Id="MmF19CrYPfYLsEjSQkrSh6" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="359,294,62,26" Id="PdyQYdLvr1nMKKJOA1KRhb">
+                  <p:NodeReference LastCategoryFullName="VL.FMODStudio.System" LastSymbolSource="VL.FMODStudio.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="ListEvents" />
+                    <CategoryReference Kind="AssemblyCategory" Name="System" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="TeC9oMmwXlYL71EpNbTCnC" Name="Input" Kind="InputPin" />
+                  <Pin Id="Q0pFqJHbx57QO369oedDv7" Name="Output" Kind="OutputPin" />
+                  <Pin Id="N4oEykG1Y6iQJMb7CYSCE9" Name="Result" Kind="OutputPin" />
+                </Node>
+              </Patch>
+            </Node>
+            <Node Bounds="371,189" Id="N6z7SkUbsHBQWJKqjgDlXf">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="OnOpen" />
+              </p:NodeReference>
+              <Pin Id="T5xYHIPzRICOGG4FzSdyNP" Name="Simulate" Kind="InputPin" />
+              <Pin Id="HvOlRK6sFezLjZHXsphe2S" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="HesXdOQaSkeQJP9DehVWn3" Bounds="424,393" />
+          </Canvas>
+          <Patch Id="QS7bkd4lVbsPdpEiztIlmJ" Name="Create" />
+          <Patch Id="JiyHVHC8VkWMJh0qTlFood" Name="Update">
+            <Pin Id="ClA5YT6DkhVPRJv2ETp8UG" Name="Output" Kind="OutputPin" Bounds="424,394" />
+          </Patch>
+          <ProcessDefinition Id="QBkISkOpvtNLVxYX4OlKCp">
+            <Fragment Id="AR6gugkdQqDLQD0Zzb5N0E" Patch="QS7bkd4lVbsPdpEiztIlmJ" Enabled="true" />
+            <Fragment Id="N5gjstTDwS6POyD7qKP9PX" Patch="JiyHVHC8VkWMJh0qTlFood" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="PWasrUI4B2zP5L9RdOLU9r" Ids="MmF19CrYPfYLsEjSQkrSh6,TeC9oMmwXlYL71EpNbTCnC" />
+          <Link Id="KydNzatx82AMCtWPfGYUSN" Ids="HvOlRK6sFezLjZHXsphe2S,LJzlneTK7tPMZeWwjfTGJU" />
+          <Link Id="DkOaN7UXHX1OcvYOxRUSuB" Ids="N4oEykG1Y6iQJMb7CYSCE9,Vp08bAACTuoONQVgH61pXo" />
+          <Link Id="DZfWxnivxGAOgsOWHCNMT8" Ids="Vp08bAACTuoONQVgH61pXo,HesXdOQaSkeQJP9DehVWn3" />
+          <Link Id="SWIjS8j6ZpOM5YrCAN2lu5" Ids="HesXdOQaSkeQJP9DehVWn3,ClA5YT6DkhVPRJv2ETp8UG" IsHidden="true" />
+        </Patch>
+      </Node>
+    </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="L5yVHuCmWnLPC9bdBxINT4">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="PBMRgMpoaW7PeP9tbtaR6T">
+        <Canvas Id="IXVZL3pv9s4QPMnuqGjC0L" CanvasType="Group">
+          <Node Bounds="327,191" Id="USrADoZwyfvLKYlWpBjAv0">
+            <p:NodeReference LastCategoryFullName="VL.FMOD" LastSymbolSource="FMODTest.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="FMODSystem" />
+            </p:NodeReference>
+            <Pin Id="FbpO2ZwjVfxNpIVsnWQPZq" Name="Banks Directory" Kind="InputPin" DefaultValue="..\..\..\FMOD Studio\examples\Build\Desktop\">
+              <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Path" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="CPpsnTnv1MzNB2ZE6guzjy" Name="Banks" Kind="InputPin" />
+            <Pin Id="TrgkxgDyccrNu7vMZG9zeO" Name="Update" Kind="ApplyPin" />
+          </Node>
+          <Node Bounds="422,266" Id="FBt5RfhzanOPPSRR0xaJNJ">
+            <p:NodeReference LastCategoryFullName="VL.FMOD" LastSymbolSource="FMODTest.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="ListEvents" />
+              <CategoryReference Kind="Category" Name="FMOD" NeedsToBeDirectParent="true" />
+            </p:NodeReference>
+            <Pin Id="MqhXig1QncYMoKFJHvgmdJ" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="OxtPl1h93VJNHOGS9ztxkW" Comment="" Bounds="426,320,209,138" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">15</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="306,360" Id="Sahb38vFiA4NTIKH33bBCO">
+            <p:NodeReference LastCategoryFullName="VL.FMOD" LastSymbolSource="FMODTest.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="EmitEvent" />
+              <CategoryReference Kind="Category" Name="FMOD" NeedsToBeDirectParent="true" />
+            </p:NodeReference>
+            <Pin Id="Hci67glAq33OKw3E9aWoox" Name="Event Path" Kind="InputPin" DefaultValue="event:/Music/Radio Station">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="QFzPaKvie6rMFpZOYkoACH" Name="Update" Kind="InputPin" DefaultValue="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pin>
+          </Node>
+          <Pad Id="NV6woPPyhJSNcaXQFgIxJE" Comment="Update" Bounds="323,277,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="F1lv1jRMJMlMTD2dzvAUst" Comment="Bank" Bounds="216,112,140,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\source\repos\FMODTest\FMODTest\bin\x64\Debug\netcoreapp3.1\bank\Build\Desktop\Master.bank">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="KA8hFLGWeTkOClNnhQfP51" Comment="Strings Bank" Bounds="459,98,140,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\source\repos\FMODTest\FMODTest\bin\x64\Debug\netcoreapp3.1\bank\Build\Desktop\Master.strings.bank">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="K37IXTuO5XHP59irNNaXiv" Comment="Event Path" Bounds="168,247,65,15" ShowValueBox="true" isIOBox="true" Value="event:/Event">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="Py4qYs5HSIzLnbhen4lSWG" Comment="" Bounds="535,180,295,64" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Path" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:Value>
+              <Item>C:\Users\magne\OneDrive\Documentos\FMOD Studio\examples\Build\Desktop\Master.bank</Item>
+              <Item>C:\Users\magne\OneDrive\Documentos\FMOD Studio\examples\Build\Desktop\Master.strings.bank</Item>
+              <Item>C:\Users\magne\OneDrive\Documentos\FMOD Studio\examples\Build\Desktop\Music.bank</Item>
+            </p:Value>
+          </Pad>
+        </Canvas>
+        <Patch Id="Me61eDbBWGsNuiBC7Iaq29" Name="Create" />
+        <Patch Id="Qg0pmKPftQCQAy0L5ehRUM" Name="Update" />
+        <ProcessDefinition Id="Dfcx2ixSaKvOsYYsp7SqIk">
+          <Fragment Id="J95oxdJNGFtOGDCSoEYTut" Patch="Me61eDbBWGsNuiBC7Iaq29" Enabled="true" />
+          <Fragment Id="GXeHtOXiJPgL4qYNKu0ouQ" Patch="Qg0pmKPftQCQAy0L5ehRUM" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="LlPyDKr9iOaLcmcZyNsFT3" Ids="MqhXig1QncYMoKFJHvgmdJ,OxtPl1h93VJNHOGS9ztxkW" />
+        <Link Id="SMUko3FOcHkNgcXldGUrJE" Ids="NV6woPPyhJSNcaXQFgIxJE,QFzPaKvie6rMFpZOYkoACH" />
+        <Link Id="Afra5YiVmQTNisI09Qs8ap" Ids="Py4qYs5HSIzLnbhen4lSWG,CPpsnTnv1MzNB2ZE6guzjy" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="H4kzLV3yx92PFa6YOImQBs" Location="VL.Skia" Version="2019.2.0-0211-g186df433f9" />
+  <PlatformDependency Id="MMm9eJYyDrFOwSLSXgP4pG" Location="../../../../PROJECTS/vvvv/VL.FMODStudio/VL.FMODStudio/bin/Debug/VL.FMODStudio.dll" />
+</Document>
