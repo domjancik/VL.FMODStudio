@@ -69,12 +69,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bank.cs" />
-    <Compile Include="fmod.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="Exceptions\NotLoadedException.cs" />
+    <Compile Include="include\fmod.cs" />
     <Compile Include="FMODEvent.cs" />
     <Compile Include="FMODEventDefinition.cs" />
-    <Compile Include="fmod_dsp.cs" />
-    <Compile Include="fmod_errors.cs" />
-    <Compile Include="fmod_studio.cs" />
+    <Compile Include="include\fmod_dsp.cs" />
+    <Compile Include="include\fmod_errors.cs" />
+    <Compile Include="include\fmod_studio.cs" />
     <Compile Include="Notifications.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="System.cs" />
@@ -84,5 +86,6 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

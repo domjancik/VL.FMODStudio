@@ -15,14 +15,16 @@ namespace VL.FMODStudio
             }
         }
 
-        public static FMOD.Studio.System initStudioSystem()
+        public static FMOD.Studio.System initStudioSystem(bool enableLiveUpdate = false)
         {
+            var initFlags = enableLiveUpdate ? FMOD.Studio.INITFLAGS.LIVEUPDATE : FMOD.Studio.INITFLAGS.NORMAL;
+
             Console.WriteLine("FMODSystem: Initializing");
             // Create the Studio System object.
             FMOD.Studio.System system;
             checkResult(FMOD.Studio.System.create(out system));
             // Initialize FMOD Studio, which will also initialize FMOD Core
-            checkResult(system.initialize(512, FMOD.Studio.INITFLAGS.NORMAL, FMOD.INITFLAGS.NORMAL, IntPtr.Zero));
+            checkResult(system.initialize(512, initFlags, FMOD.INITFLAGS.NORMAL, IntPtr.Zero));
 
             return system;
         }

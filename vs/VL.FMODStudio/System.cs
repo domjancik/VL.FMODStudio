@@ -1,21 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reactive.Subjects;
-using System.Text;
 using System.Threading.Tasks;
-using FMOD;
 
 namespace VL.FMODStudio
 {
     public class System: IDisposable
     {
         //public IObservable<object> EventsChanged => _eventsChanged;
-        
+
+        public bool Ready { get; private set; }
+
         private static System instance = null;
 
         private FMOD.Studio.System _system;
+
         //private Subject<string> _eventsChanged;
 
         public static System Instance
@@ -33,6 +31,7 @@ namespace VL.FMODStudio
 
         private System(FMOD.Studio.System system)
         {
+            Ready = false;
             _system = system;
             //_eventsChanged = new Subject<string>();
         }
@@ -74,6 +73,9 @@ namespace VL.FMODStudio
             {
                 LoadBank(path);
             }
+
+            Ready = true;
+            Notifications.Instance.BanksLoaded.OnNext("");
         }
 
         public IEnumerable<string> ListEvents()
@@ -98,6 +100,12 @@ namespace VL.FMODStudio
             return paths;
         }
 
+        public FMOD.Studio.EventDescription GetEventDescription(string eventPath)
+        {
+            FMOD.Studio.EventDescription ev;
+            Utilities.checkResult(_system.getEvent(eventPath, out ev));
+            return ev;
+        }
         public void EmitEvent(string eventPath)
         {
             FMOD.Studio.EventDescription ev;
@@ -106,6 +114,7 @@ namespace VL.FMODStudio
             Utilities.checkResult(_system.getEvent(eventPath, out ev));
             Utilities.checkResult(ev.createInstance(out eventInstance));
             Utilities.checkResult(eventInstance.start());
+            Utilities.checkResult(eventInstance.release());
         }
 
         public void EmitEvent(FMODEvent input) {

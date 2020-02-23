@@ -9,7 +9,6 @@ namespace VL.FMODStudio
 {
     class Notifications
     {
-        private static Notifications instance = null;
 
         public static Notifications Instance
         {
@@ -25,10 +24,14 @@ namespace VL.FMODStudio
         }
 
         public Subject<string> EventsChanged;
+        public Subject<string> BanksLoaded;
+
+        private static Notifications instance = null;
 
         public Notifications()
         {
             EventsChanged = new Subject<string>();
+            BanksLoaded = new Subject<string>();
         }
     }
 }
