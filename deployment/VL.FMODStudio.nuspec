@@ -21,7 +21,11 @@
   <files>
     <file src="..\*.vl" target="" exclude="" />
     <file src="..\**\*.vl" target="" exclude="" />
-    <file src="..\src\VL.FMODStudio\bin\Release\VL.FMODStudio.dll" target="lib" exclude="" />
+    <file src="..\src\VL.FMODStudio\bin\Release\VL.FMODStudio.dll" target="lib" exclu`="" />
+    <file src="..\lib\fmod.dll" target="lib" exclude="" />
+    <file src="..\lib\fmodstudio.dll" target="lib" exclude="" />
+    <file src="..\lib\fsbank.dll" target="lib" exclude="" />
+    <file src="..\lib\libfsbvorbis64.dll" target="lib" exclude="" />
     <file src="..\nugeticon.png" target="images" />
   </files>
 </package>
