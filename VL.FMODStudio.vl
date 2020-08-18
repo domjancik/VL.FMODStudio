@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="ABkKRGZEvXJMaXt6YyVmSH" LanguageVersion="2019.2.0-0211-186df433f9" Version="0.128">
-  <NugetDependency Id="BqMn4oMIUYgMzLTMzkbweF" Location="VL.CoreLib" Version="2019.2.0-0211-g186df433f9" />
+<Document xmlns:p="property" Id="ABkKRGZEvXJMaXt6YyVmSH" LanguageVersion="2020.1.7.184" Version="0.128">
+  <NugetDependency Id="BqMn4oMIUYgMzLTMzkbweF" Location="VL.CoreLib" Version="2020.1.7" />
   <Patch Id="NeZ3QSrIbAoNRQxhPCwYoh">
-    <Canvas Id="S7nZggW5AySQLTt68mGFXo" DefaultCategory="VL.FMOD" CanvasType="FullCategory">
+    <Canvas Id="S7nZggW5AySQLTt68mGFXo" DefaultCategory="VL.FMODStudio" CanvasType="FullCategory">
       <!--
 
     ************************ FMODSystem ************************
@@ -127,7 +127,7 @@
     ************************ EmitEvent ************************
 
 -->
-      <Node Name="EmitEvent" Bounds="328,233" Id="MWR6M1eLHBEMYY02xrhjuZ">
+      <Node Name="EmitEvent" Bounds="330,297" Id="MWR6M1eLHBEMYY02xrhjuZ">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
@@ -172,7 +172,7 @@
     ************************ ListEvents ************************
 
 -->
-      <Node Name="ListEvents" Bounds="340,280" Id="Dz1WLtVy1jSMOdPYNfxGxO">
+      <Node Name="ListEvents" Bounds="330,354" Id="Dz1WLtVy1jSMOdPYNfxGxO">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
@@ -242,7 +242,7 @@
     ************************ FMODEvent ************************
 
 -->
-      <Node Name="FMODEvent" Bounds="554,186" Id="AklSJdpgJ1WLW08Fr34bwZ">
+      <Node Name="FMODEvent" Bounds="330,240" Id="AklSJdpgJ1WLW08Fr34bwZ">
         <p:NodeReference>
           <Choice Kind="ForwardDefinition" Name="Forward" />
           <FullNameCategoryReference ID="Primitive" />
@@ -260,7 +260,7 @@
     ************************ ContinuousEvent ************************
 
 -->
-      <Node Name="ContinuousEvent" Bounds="345,333" Id="LA5IqhPrjLaPWgYNExAfXj">
+      <Node Name="ContinuousEvent" Bounds="330,411" Id="LA5IqhPrjLaPWgYNExAfXj">
         <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
           <Choice Kind="ContainerDefinition" Name="Process" />
         </p:NodeReference>
@@ -304,6 +304,7 @@
               <Pin Id="TLTKQGXjDGyOUalOrNP6nG" Name="Force" Kind="InputPin" />
               <Pin Id="GzVHQ7FnxeFL9KjNgk1i3E" Name="Dispose Cached Outputs" Kind="InputPin" />
               <Pin Id="U96VCH9pXqbML5vzNGi8d5" Name="Has Changed" Kind="OutputPin" />
+              <ControlPoint Id="U7rF5QObmUPMUJGShyG5Y2" Bounds="476,600" Alignment="Top" />
               <Patch Id="QzRoUMp15ctL2bSeUIZXzJ" ManuallySortedPins="true">
                 <Patch Id="JBUmCI0mBPMP12okWpP5bt" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="Rc4v0J6aNcZN0bGtKBb3jz" Name="Then" ManuallySortedPins="true" />
@@ -399,9 +400,9 @@
                   </p:NodeReference>
                   <Pin Id="LBIsKjzso83Oel1B77xPz0" Name="Input" Kind="StateInputPin" />
                   <Pin Id="GNCzCMrlMQsOoHyFdtqbLo" Name="Solution Update Kind" Kind="InputPin" />
+                  <Pin Id="UVL08lkdZl6QVRpoqyVoA5" Name="Output" Kind="OutputPin" />
                 </Node>
               </Patch>
-              <ControlPoint Id="U7rF5QObmUPMUJGShyG5Y2" Bounds="476,600" Alignment="Top" />
             </Node>
             <Pad Id="GYGTPwntL02M62GbvEMAdx" SlotId="JMoviqwKoJLM75nbHTAkwR" Bounds="477,335" />
             <Node Bounds="313,321,38,26" Id="RIUhEJaHOyrQOrxhOPpRKp">
@@ -610,12 +611,12 @@
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="MonoFlop (FrameBased)" />
               </p:NodeReference>
+              <Pin Id="G8LmBCppHULQWb57YzMpcj" Name="Set" Kind="InputPin" />
               <Pin Id="LuDyhXy9sQlMXCWcrrlhaz" Name="Frames" Kind="InputPin" DefaultValue="15">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Integer32" />
                 </p:TypeAnnotation>
               </Pin>
-              <Pin Id="G8LmBCppHULQWb57YzMpcj" Name="Set" Kind="InputPin" />
               <Pin Id="Ix3HIMUPcMpMSUInvxNBFG" Name="Retriggerable" Kind="InputPin" />
               <Pin Id="LsR5NRlnwT0MXt9sVhQpKP" Name="Reset" Kind="InputPin" />
               <Pin Id="V5eqYzS8kwwOFZzHPWBRU5" Name="Value" Kind="OutputPin" />
@@ -746,7 +747,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="H4kzLV3yx92PFa6YOImQBs" Location="VL.Skia" Version="2019.2.0-0211-g186df433f9" />
-  <PlatformDependency Id="OLm8KmaG2Z2LRCwe5fRJFM" Location="../vs/VL.FMODStudio/bin/Debug/VL.FMODStudio.dll" />
-  <NugetDependency Id="DCeTo9FgXPXPTTYSdXY4El" Location="VL.Lang" Version="2019.2.0-0211-g186df433f9" />
+  <NugetDependency Id="H4kzLV3yx92PFa6YOImQBs" Location="VL.Skia" Version="2020.1.7" />
+  <NugetDependency Id="DCeTo9FgXPXPTTYSdXY4El" Location="VL.Lang" Version="2020.1.7" />
+  <PlatformDependency Id="NqbOU2Naq7aP7BLQADsSkW" Location="./lib/VL.FMODStudio.dll" />
 </Document>
