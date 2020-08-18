@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>VL.FMODStudio</id>
-    <version>0.1.1-alpha</version>
+    <version>0.1.2-alpha</version>
     <title>VL.FMODStudio</title>
     <icon>images\nugeticon.png</icon>
     <authors>domj</authors>
@@ -11,7 +11,7 @@
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/dominikjancik/VL.FMODStudio</projectUrl>
     <repository type="git" url="https://github.com/dominikjancik/VL.FMODStudio"/>
-    <description>VL wrapper for the FMOD Studio API allowing you to emit FMOD events and control their parameters. You are required to copy native FMOD libraries to lib-native in the nuget installation directory. Get them here: https://www.fmod.com/download (FMOD Studio API)</description>
+    <description>VL wrapper for the FMOD Studio API allowing you to emit FMOD events and control their parameters.</description>
     <summary>VL nodeset to use the FMOD Studio Audio Engine</summary>
     <copyright>Copyright © 2020 by Dominik Jancik. All rights reserved.</copyright>
     <releaseNotes>Nuget Release</releaseNotes>
