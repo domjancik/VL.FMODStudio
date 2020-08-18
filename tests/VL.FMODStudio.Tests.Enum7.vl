@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="HvQXSNS5wkZOnLtw0np6CK" LanguageVersion="2019.2.0-0211-186df433f9" Version="0.128">
+  <NugetDependency Id="JwLBn6f3zVqNLOMiN50vg0" Location="VL.CoreLib" Version="2019.2.0-0211-g186df433f9" />
+  <Patch Id="F7XlYAxpEMNOX8PXRfk9ll">
+    <Canvas Id="AVfmVw4ouhUOgnjNDTWQ4k" DefaultCategory="Main" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="Sf1wNJHzrXXL1fdNIAJRuz">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="CjSRB91qiPDNyecVhky5J4">
+        <Canvas Id="Hjsd9suJEmoOXvN5vMARel" CanvasType="Group">
+          <Pad Id="Tl4eDBD8OVCOuWEgDSXfDU" Comment="" Bounds="133,305,174,15" ShowValueBox="true" isIOBox="true" Value="event:/Music/Level 03">
+            <p:TypeAnnotation LastCategoryFullName="VL.FMOD" LastSymbolSource="VL.FMODStudio.vl">
+              <Choice Kind="TypeFlag" Name="FMODEvent" />
+            </p:TypeAnnotation>
+          </Pad>
+        </Canvas>
+        <Patch Id="AAVcZ0IhqWWLDDTV6zG8Bp" Name="Create" />
+        <Patch Id="E34E85OFaqYQUrcYQxFpJS" Name="Update" />
+        <ProcessDefinition Id="Is9g92ST9NpOGiH4CopqmW">
+          <Fragment Id="G3LwLwJnM1wQSMYQpwaMZ2" Patch="AAVcZ0IhqWWLDDTV6zG8Bp" Enabled="true" />
+          <Fragment Id="LstGM0RXd5nNEfJiSpbmei" Patch="E34E85OFaqYQUrcYQxFpJS" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="VpN0r8ezxUpNO5Ha1DsoTN" Location="VL.Skia" Version="2019.2.0-0211-g186df433f9" />
+  <DocumentDependency Id="OLfSCvMIzWOMXAV8AjRG6u" Location="../VL.FMODStudio.vl" />
+</Document>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="HvQXSNS5wkZOnLtw0np6CK" LanguageVersion="2019.2.0-0211-186df433f9" Version="0.128">
+  <NugetDependency Id="JwLBn6f3zVqNLOMiN50vg0" Location="VL.CoreLib" Version="2019.2.0-0211-g186df433f9" />
+  <Patch Id="F7XlYAxpEMNOX8PXRfk9ll">
+    <Canvas Id="AVfmVw4ouhUOgnjNDTWQ4k" DefaultCategory="Main" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="Sf1wNJHzrXXL1fdNIAJRuz">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="CjSRB91qiPDNyecVhky5J4">
+        <Canvas Id="Hjsd9suJEmoOXvN5vMARel" CanvasType="Group">
+          <Node Bounds="642,327,25,19" Id="PAy2JGron8zMf3mGV8VGf6">
+            <p:NodeReference LastCategoryFullName="VL.FMOD" LastSymbolSource="VL.FMODStudio.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="FMODSystem" />
+            </p:NodeReference>
+            <Pin Id="GAdMHw5heGNN9pmcyZSNMW" Name="Banks" Kind="InputPin" />
+            <Pin Id="EdOLhVkJu3eM4vnKByuqUl" Name="Update" Kind="ApplyPin" />
+          </Node>
+          <Node Bounds="587,373" Id="CnerEOgyweWQRfsPMlcjPl">
+            <p:NodeReference LastCategoryFullName="VL.FMOD" LastSymbolSource="FMODTest.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="ListEvents" />
+              <CategoryReference Kind="Category" Name="FMOD" NeedsToBeDirectParent="true" />
+            </p:NodeReference>
+            <Pin Id="VOxj2ystmv3QMtDeCzyD2u" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="T4h0EHXihJSOtditrp7we8" Comment="" Bounds="591,427,209,138" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">15</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Dwgb4yNG6WzL1UbmBCB6Hb" Comment="" Bounds="641,251,295,65" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Path" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:Value>
+              <Item>C:\Users\magne\OneDrive\Documentos\FMOD Studio\examples\Build\Desktop\Master.bank</Item>
+              <Item>C:\Users\magne\OneDrive\Documentos\FMOD Studio\examples\Build\Desktop\Master.strings.bank</Item>
+              <Item>C:\Users\magne\OneDrive\Documentos\FMOD Studio\examples\Build\Desktop\Music.bank</Item>
+            </p:Value>
+          </Pad>
+          <Node Bounds="387,384" Id="R2fKoCe4isyLcvk9POuM0x">
+            <p:NodeReference LastCategoryFullName="VL.FMOD.FMODEvent" LastSymbolSource="VL.FMODStudio.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="ClassType" Name="FMODEvent" />
+              <Choice Kind="OperationCallFlag" Name="CreateDefault" />
+            </p:NodeReference>
+            <Pin Id="L2yyAIrmrQ5LX2H2E2s1un" Name="Result" Kind="OutputPin" />
+          </Node>
+        </Canvas>
+        <Patch Id="AAVcZ0IhqWWLDDTV6zG8Bp" Name="Create" />
+        <Patch Id="E34E85OFaqYQUrcYQxFpJS" Name="Update" />
+        <ProcessDefinition Id="Is9g92ST9NpOGiH4CopqmW">
+          <Fragment Id="G3LwLwJnM1wQSMYQpwaMZ2" Patch="AAVcZ0IhqWWLDDTV6zG8Bp" Enabled="true" />
+          <Fragment Id="LstGM0RXd5nNEfJiSpbmei" Patch="E34E85OFaqYQUrcYQxFpJS" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="NprrqX0ERLYNN1xn3HsSgq" Ids="VOxj2ystmv3QMtDeCzyD2u,T4h0EHXihJSOtditrp7we8" />
+        <Link Id="Ce1u35JknfSNB6NamIJbwU" Ids="Dwgb4yNG6WzL1UbmBCB6Hb,GAdMHw5heGNN9pmcyZSNMW" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="VpN0r8ezxUpNO5Ha1DsoTN" Location="VL.Skia" Version="2019.2.0-0211-g186df433f9" />
+  <DocumentDependency Id="OLfSCvMIzWOMXAV8AjRG6u" Location="../VL.FMODStudio.vl" />
+</Document>
