@@ -21,7 +21,11 @@
               <Choice Kind="ProcessAppFlag" Name="FMODSystem" />
             </p:NodeReference>
             <Pin Id="RcnW8WkCXnDOA5NmqMnxpg" Name="Output Type" Kind="InputPin" />
-            <Pin Id="V4O5zzalBH7NSkTfeb9H30" Name="Driver Index" Kind="InputPin" />
+            <Pin Id="V4O5zzalBH7NSkTfeb9H30" Name="Driver Index" Kind="InputPin" DefaultValue="1">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pin>
             <Pin Id="QwZNpygWL7BQAu4Fj13nD1" Name="Sample Rate" Kind="InputPin" />
             <Pin Id="Qcfo16ReX0uPQAtzYrdPcV" Name="Speaker Mode" Kind="InputPin" />
             <Pin Id="FxVDno7bunMMtZSzAPRZ96" Name="Num Raw Speakers" Kind="InputPin" />
@@ -102,18 +106,18 @@
               </Pad>
             </Patch>
           </Node>
-          <Pad Id="TWWLaL8KibjLGocecx2PYI" Comment="Output Type" Bounds="469,110,106,15" ShowValueBox="true" isIOBox="true" Value="WAVWRITER">
+          <Pad Id="TWWLaL8KibjLGocecx2PYI" Comment="Output Type" Bounds="469,110,106,15" ShowValueBox="true" isIOBox="true" Value="ASIO">
             <p:TypeAnnotation LastCategoryFullName="FMOD" LastSymbolSource="VL.FMODStudio.dll">
               <Choice Kind="TypeFlag" Name="OUTPUTTYPE" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="MURgKP1xkVyPAHXbc3QrQs" Comment="Success" Bounds="469,524,35,35" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="DyqyxfMgRs4OTOCbki4QF8" Comment="Driver Info" Bounds="539,404,491,95" ShowValueBox="true" isIOBox="true">
+          <Pad Id="MURgKP1xkVyPAHXbc3QrQs" Comment="Success" Bounds="469,532,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="DyqyxfMgRs4OTOCbki4QF8" Comment="Driver Info" Bounds="539,409,491,95" ShowValueBox="true" isIOBox="true">
             <p:Value>
               <Item></Item>
             </p:Value>
           </Pad>
-          <Pad Id="CpXAFiZDSvgMXP7BDI62VX" Comment="Error Message" Bounds="609,353,419,31" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="CpXAFiZDSvgMXP7BDI62VX" Comment="Error Message" Bounds="609,353,421,31" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="KgEfzW8R8bTPg6IJtgQCsr" Name="Create" />
         <Patch Id="VNoxEERqgphPBZ9ds2CE77" Name="Update" />
