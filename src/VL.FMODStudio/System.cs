@@ -37,10 +37,10 @@ namespace VL.FMODStudio
             }
         }
 
-        public System(OUTPUTTYPE outputType = OUTPUTTYPE.AUTODETECT, int driverIndex = 0, int sampleRate = 48000, SPEAKERMODE speakerMode = SPEAKERMODE.DEFAULT, int numRawSpeakers = 0, uint bufferLength = 1024, int numBuffers = 4)
+        public System(bool enableLiveUpdate = false, OUTPUTTYPE outputType = OUTPUTTYPE.AUTODETECT, int driverIndex = 0, int sampleRate = 48000, SPEAKERMODE speakerMode = SPEAKERMODE.DEFAULT, int numRawSpeakers = 0, uint bufferLength = 1024, int numBuffers = 4)
         {
             Ready = false;
-            _system = Utilities.initStudioSystem(false, outputType, driverIndex, sampleRate, speakerMode, numRawSpeakers, bufferLength, numBuffers);
+            _system = Utilities.initStudioSystem(enableLiveUpdate, outputType, driverIndex, sampleRate, speakerMode, numRawSpeakers, bufferLength, numBuffers);
         }
 
         private System(FMOD.Studio.System system)

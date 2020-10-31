@@ -143,6 +143,7 @@
                     <CategoryReference Kind="AssemblyCategory" Name="System" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                   </p:NodeReference>
+                  <Pin Id="NflPHCedckoQHXM0RNQIfQ" Name="Enable Live Update" Kind="InputPin" />
                   <Pin Id="RF3htw846XKNKn6F8JwuFS" Name="Output Type" Kind="InputPin" />
                   <Pin Id="AyPYUc77fjALqAuvHz703D" Name="Driver Index" Kind="InputPin" />
                   <Pin Id="A1TIivLKgkTLhWBQF9HDcm" Name="Sample Rate" Kind="InputPin" />
@@ -198,6 +199,7 @@
             </Node>
             <Pad Id="VHP7tGGQDFmOJtUC8p2ox9" SlotId="BQHznY9AJx7O1os3DSrmuf" Bounds="901,746" />
             <ControlPoint Id="QKQTJxNlcS6PqTBLDrvf1r" Bounds="899,805" />
+            <ControlPoint Id="QqTfWkWITBXOkgzfTigoqQ" Bounds="524,90" />
           </Canvas>
           <Patch Id="A5OxqXFYhAOMhhKn4rFyqz" Name="Create">
             <Pin Id="NWnNhGGM4WbO2yTqOm4xrU" Name="Banks" Kind="InputPin" Bounds="679,115" />
@@ -208,6 +210,7 @@
             <Pin Id="SZChI9YxGqrM74miBXauqB" Name="Num Raw Speakers" Kind="InputPin" />
             <Pin Id="B6UVQKBZtEaPYeLIP8m99Q" Name="Buffer Length" Kind="InputPin" />
             <Pin Id="UruxDzXQUddOtB1dRoeDfg" Name="Num Buffers" Kind="InputPin" />
+            <Pin Id="NQlt79iRDxeO9QweksW6tS" Name="Enable Live Update" Kind="InputPin" />
           </Patch>
           <Patch Id="OU8oH82zOMaPgMDOYIKzHZ" Name="Update" ManuallySortedPins="true">
             <Pin Id="MG3r03r0fx3PeZooiZCby2" Name="Success" Kind="OutputPin" />
@@ -266,6 +269,8 @@
           <Link Id="LdXSToul1cuOOA2x9569z0" Ids="MdLC9zwWYf1LeOyv9UGRbb,VHP7tGGQDFmOJtUC8p2ox9" />
           <Link Id="T46hVnmfGDuL9U6xedzdIM" Ids="VHP7tGGQDFmOJtUC8p2ox9,QKQTJxNlcS6PqTBLDrvf1r" />
           <Link Id="B3Dreyo2rAHOZy79EN8yYT" Ids="QKQTJxNlcS6PqTBLDrvf1r,BkTJpvaZWVpQBca4kIZ2ZI" IsHidden="true" />
+          <Link Id="H56zwGcUKylOtoZ3OwQhua" Ids="QqTfWkWITBXOkgzfTigoqQ,NflPHCedckoQHXM0RNQIfQ" />
+          <Link Id="IzaYaQhChFULQYuUoC3OcK" Ids="NQlt79iRDxeO9QweksW6tS,QqTfWkWITBXOkgzfTigoqQ" IsHidden="true" />
         </Patch>
       </Node>
       <!--
