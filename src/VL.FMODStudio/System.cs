@@ -1,6 +1,8 @@
-﻿using System;
+﻿using FMOD;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using VL.Lib.Collections;
 
 namespace VL.FMODStudio
 {
@@ -13,6 +15,7 @@ namespace VL.FMODStudio
         private static System instance = null;
 
         private FMOD.Studio.System _system;
+        private OUTPUTTYPE _outputType;
 
         //private Subject<string> _eventsChanged;
 
@@ -22,11 +25,22 @@ namespace VL.FMODStudio
             {
                 if (instance == null)
                 {
-                    instance = new System(Utilities.initStudioSystem());
+                    instance = new System(Utilities.initStudioSystem(false, OUTPUTTYPE.AUTODETECT));
                 }
 
                 return instance;
             }
+            set
+            {
+                instance= null;
+                instance = value;
+            }
+        }
+
+        public System(bool enableLiveUpdate = false, OUTPUTTYPE outputType = OUTPUTTYPE.AUTODETECT, int driverIndex = 0, int sampleRate = 48000, SPEAKERMODE speakerMode = SPEAKERMODE.DEFAULT, int numRawSpeakers = 0, uint bufferLength = 1024, int numBuffers = 4)
+        {
+            Ready = false;
+            _system = Utilities.initStudioSystem(enableLiveUpdate, outputType, driverIndex, sampleRate, speakerMode, numRawSpeakers, bufferLength, numBuffers);
         }
 
         private System(FMOD.Studio.System system)
@@ -76,6 +90,25 @@ namespace VL.FMODStudio
 
             Ready = true;
             Notifications.Instance.BanksLoaded.OnNext("");
+        }
+
+        public Spread<String> GetDriverInfo()
+        {
+            FMOD.System coreSystem;
+            _system.getCoreSystem(out coreSystem);
+            int numDrivers;
+            int speakerModeChannels, systemRate;
+            SPEAKERMODE speakerMode;
+            Guid guid;
+            string name;
+            coreSystem.getNumDrivers(out numDrivers);
+            SpreadBuilder<string> sb = new SpreadBuilder<string>();
+            for (int i=0; i < numDrivers; i++)
+            {
+                coreSystem.getDriverInfo(i, out name, 255, out guid, out systemRate, out speakerMode, out speakerModeChannels);
+                sb.Add(string.Format("{0} @ {1}, Channels: {2}, Mode: {3}", new object[] { name , systemRate , speakerModeChannels, speakerMode.ToString() }));
+            }
+            return sb.ToSpread();
         }
 
         public IEnumerable<string> ListEvents()
