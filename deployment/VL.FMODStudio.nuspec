@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>VL.FMODStudio</id>
-    <version>0.1.2-alpha</version>
+    <version>0.1.3-alpha</version>
     <title>VL.FMODStudio</title>
     <icon>images\nugeticon.png</icon>
     <authors>domj</authors>
